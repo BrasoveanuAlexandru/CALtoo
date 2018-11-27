@@ -19,6 +19,24 @@ void vSetMotorSpeed(T_U8 u8Speed)
 	PWM1_vSetDuty(u8Speed,2);
 }
 }
-//void vSetMotorDirSpeed(T_U8 u8Dir,T_U8 u8Speed)
-//{
-//}
+void SetDirServo(T_U8 unghi)
+{
+	float duty;
+
+
+	if(unghi<60)
+	{
+		unghi=60;
+	}
+else
+	if(unghi>120)
+	{
+		unghi=120;
+	}
+
+	
+	duty=(float)(7*(unghi-10))/160+4;
+
+	PWM1_vSetDuty(duty,1);
+
+}

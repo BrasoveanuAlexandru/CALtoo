@@ -7,5 +7,7 @@
 void vMotorInit();
 void vSetMotorDir(T_U8 u8Dir);
 void vSetMotorSpeed(T_U8 u8Speed);
-void vSetMotorDirSpeed(T_U8 u8Dir,T_U8 u8Speed);
+//void vSetMotorDirSpeed(T_U8 u8Dir,T_U8 u8Speed);
+void SetDirServo(T_U8 unghi);
+
 #endif
